@@ -11,10 +11,15 @@ We present both theoretical and empirical results to justify our proposed method
 BibTex
 
 @inproceedings{SVB,
+
 title = { Improving training of deep neural networks via Singular Value Bounding},
+
 author  = { Kui Jia and Dacheng Tao and Shenghua Gao and Xiangmin Xu},
+
 year  = {2017},
+
 booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}
+
 }
 
 # Results
