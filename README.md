@@ -14,12 +14,6 @@ We present both theoretical and empirical results to justify our proposed method
 
 #### Controlled studies on CIFAR10 using 20-layer (left) and 38-layer (right) ConvNets (VGG)
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
 #### Ablation studies on CIFAR10 using a 68-layer ResNet
 
 #### Wide ResNets on CIFAR10 and CIFAR100
