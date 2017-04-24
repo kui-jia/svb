@@ -12,13 +12,13 @@ We present both theoretical and empirical results to justify our proposed method
 
 # Results
 
-### Controlled studies on CIFAR10 using 20-layer (left) and 38-layer (right) ConvNets (VGG)
+#### Controlled studies on CIFAR10 using 20-layer (left) and 38-layer (right) ConvNets (VGG)
 
-### Ablation studies on CIFAR10 using a 68-layer ResNet
+#### Ablation studies on CIFAR10 using a 68-layer ResNet
 
-### Wide ResNets on CIFAR10 and CIFAR100
+#### Wide ResNets on CIFAR10 and CIFAR100
 
-### Preliminary results on ImageNet 
+#### Preliminary results on ImageNet 
 
 # Usage
 
