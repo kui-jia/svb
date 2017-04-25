@@ -24,7 +24,16 @@ We present both theoretical and empirical results to justify our proposed method
 
 Ablation studies on CIFAR10, using a pre-activation ResNet with 68 weight layers of 3 x 3 convolutional filters. Results are in the format of *best (mean + std)* over 5 runs. Standard data augmentation (4 pixels zero-padding plus horizontal flipping) is used.
 
-#### Wide ResNets on CIFAR10 and CIFAR100
+#### Results on CIFAR10 and CIFAR100 using Wide ResNets
+
+| Methods                    | CIFAR10           | CIFAR100            | # layers           | # params              | 
+| ------------- |:-------------:| :-------------:| :-------------:| :-------------:| 
+| Wide ResNet W/O SVB+BBN    | 3.78 | 19.92 | 28 | 36.5M |
+| Wide ResNet WITH SVB+BBN   | 3.24 | 17.47 | 28 | 36.5M |
+| Wider ResNet W/O SVB+BBN   | 3.64 | 19.25 | 28 | 94.2M |
+| Wider ResNet WITH SVB+BBN  | 3.06 | 16.90 | 28 | 94.2M |
+
+*Wide ResNet* and *Wider ResNet* in the table above respectively refer to the architectures of “WRN-28-10” and “WRN-28-16” as in [Wide Residual Networks](https://arxiv.org/abs/1605.07146). Standard data augmentation (4 pixels zero-padding plus horizontal flipping) is used. 
 
 #### Preliminary results on ImageNet 
 
