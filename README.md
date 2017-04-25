@@ -16,6 +16,8 @@ We present both theoretical and empirical results to justify our proposed method
 
 ![alt text](http://www.aperture-lab.net/research/svb/ConvNetStudies.png)
 
+Validation curves on CIFAR10 using two ConvNets of 20 and 38 weight layers respectively. Blue lines are results by SGD with momentum. Red lines are results by SVB at different values of $\epsilon$ ($0.01, 0.05, 0.2, 0.5, 1$) in Algorithm \ref{AlgmSVB}. Black lines are results using both SVB (fixing $\epsilon = 0.05$) and BBN at different values of $\tilde{\epsilon}$ ($0.01, 0.05, 0.2, 0.5, 1$)) in Algorithm \ref{AlgmBBN}. These parameter settings are simply casual choices. The left two figures are from the $20$-layer ConvNet, and the right two ones are from the $38$-layer ConvNet.
+
 #### Ablation studies on CIFAR10 using a 68-layer ResNet
 
 | Training methods        | Error rate (%)           | 
