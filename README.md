@@ -16,6 +16,14 @@ We present both theoretical and empirical results to justify our proposed method
 
 #### Ablation studies on CIFAR10 using a 68-layer ResNet
 
+| Training methods        | Error rate (%)           | 
+| ------------- |:-------------:| 
+| SGD with momentum + BN      | 6.10 (6.22 +/- 0.14) | 
+| SVB + BN      | 5.65 (5.79 +/- 0.10)      |  
+| SVB + BBN | 5.37 (5.49 +/- 0.11)     | 
+
+Ablation studies on CIFAR10, using a pre-activation ResNet with 68 weight layers of 3 x 3 convolutional filters. Results are in the format of *best (mean + std)* over 5 runs. Standard data augmentation (4 pixels zero-padding plus horizontal flipping) is used.
+
 #### Wide ResNets on CIFAR10 and CIFAR100
 
 #### Preliminary results on ImageNet 
