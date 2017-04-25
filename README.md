@@ -14,6 +14,8 @@ We present both theoretical and empirical results to justify our proposed method
 
 #### Controlled studies on CIFAR10 using 20-layer (left) and 38-layer (right) ConvNets (VGG)
 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
 #### Ablation studies on CIFAR10 using a 68-layer ResNet
 
 | Training methods        | Error rate (%)           | 
