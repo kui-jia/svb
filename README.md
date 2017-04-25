@@ -37,6 +37,13 @@ Ablation studies on CIFAR10, using a pre-activation ResNet with 68 weight layers
 
 #### Preliminary results on ImageNet 
 
+| Training methods        | Top-1 error (%)           |  Top-1 error (%)    |
+| ------------- |:-------------:|:-------------:| 
+| Our Inception-ResNet     | 21.61 | 5.91 |
+| Our Inception-ResNet WITH SVB+BN      | 21.20 | 5.57 |
+
+Results of single-model ([Inception-ResNet](https://arxiv.org/abs/1602.07261)) and single-crop testing on the ImageNet validation set.   
+
 # Usage
 
 # Acknowledgements
