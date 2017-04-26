@@ -50,4 +50,21 @@ Results of single-model ([Inception-ResNet](https://arxiv.org/abs/1602.07261)) a
 
 # Usage
 
+#### Installation 
+
+The code depends on the [Torch library](http://torch.ch/). Please install torch first.
+
+#### Training
+
+Run the following from command line if training is based on standard SGD with momentum
+
+'th main.lua -cudnnSetting deterministic -netType PreActResNet -ensembleID 1 -BN true -nBaseRecur 11 -kWRN 1 -lrDecayMethod exp -lrBase 0.5 -lrEnd 0.001 -batchSize 128 -nEpoch 160 -nLRDecayStage 80 -weightDecay 0.0001 -svBFlag false -bnsBFlag false'
+
+th main.lua -cudnnSetting deterministic -netType PreActResNet -ensembleID 1 -BN true -nBaseRecur 11 -kWRN 1 -lrDecayMethod exp -lrBase 0.5 -lrEnd 0.001 -batchSize 128 -nEpoch 160 -nLRDecayStage 80 -weightDecay 0.0001 -svBFlag true -svBFactor 1.5 -svBIter 391 -bnsBFlag false
+
+th main.lua -cudnnSetting deterministic -netType PreActResNet -ensembleID 1 -BN true -nBaseRecur 11 -kWRN 1 -lrDecayMethod exp -lrBase 0.5 -lrEnd 0.001 -batchSize 128 -nEpoch 160 -nLRDecayStage 80 -weightDecay 0.0001 -svBFlag true -svBFactor 1.5 -svBIter 391 -bnsBFlag true -bnsBFactor 2 -bnsBType BBN
+
+One may change hyperparameters either in the file optsArgParse.lua or at command line.  
+
+
 # Acknowledgements
