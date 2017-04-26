@@ -60,15 +60,15 @@ We take a pre-activation version of ResNet as the example to explain how to trai
 
 SGD with momentum
 
-> th main.lua -cudnnSetting deterministic -netType PreActResNet -ensembleID 1 -BN true -nBaseRecur 11 -kWRN 1 -lrDecayMethod exp -lrBase 0.5 -lrEnd 0.001 -batchSize 128 -nEpoch 160 -nLRDecayStage 80 -weightDecay 0.0001 -svBFlag false -bnsBFlag false
+    th main.lua -cudnnSetting deterministic -netType PreActResNet -ensembleID 1 -BN true -nBaseRecur 11 -kWRN 1 -lrDecayMethod exp -lrBase 0.5 -lrEnd 0.001 -batchSize 128 -nEpoch 160 -nLRDecayStage 80 -weightDecay 0.0001 -svBFlag false -bnsBFlag false
 
 SGD with momentum with SVB turned on
 
-`th main.lua -cudnnSetting deterministic -netType PreActResNet -ensembleID 1 -BN true -nBaseRecur 11 -kWRN 1 -lrDecayMethod exp -lrBase 0.5 -lrEnd 0.001 -batchSize 128 -nEpoch 160 -nLRDecayStage 80 -weightDecay 0.0001 -svBFlag true -svBFactor 1.5 -svBIter 391 -bnsBFlag false`
+    th main.lua -cudnnSetting deterministic -netType PreActResNet -ensembleID 1 -BN true -nBaseRecur 11 -kWRN 1 -lrDecayMethod exp -lrBase 0.5 -lrEnd 0.001 -batchSize 128 -nEpoch 160 -nLRDecayStage 80 -weightDecay 0.0001 -svBFlag true -svBFactor 1.5 -svBIter 391 -bnsBFlag false
 
 SGD with momentum with both SVB and BBN turned on
 
-`th main.lua -cudnnSetting deterministic -netType PreActResNet -ensembleID 1 -BN true -nBaseRecur 11 -kWRN 1 -lrDecayMethod exp -lrBase 0.5 -lrEnd 0.001 -batchSize 128 -nEpoch 160 -nLRDecayStage 80 -weightDecay 0.0001 -svBFlag true -svBFactor 1.5 -svBIter 391 -bnsBFlag true -bnsBFactor 2 -bnsBType BBN`
+    th main.lua -cudnnSetting deterministic -netType PreActResNet -ensembleID 1 -BN true -nBaseRecur 11 -kWRN 1 -lrDecayMethod exp -lrBase 0.5 -lrEnd 0.001 -batchSize 128 -nEpoch 160 -nLRDecayStage 80 -weightDecay 0.0001 -svBFlag true -svBFactor 1.5 -svBIter 391 -bnsBFlag true -bnsBFactor 2 -bnsBType BBN
 
 `svbFactor` is set as 1 plus the \epsilon value of Algorithm 1. `bnsBFactor` is set as 1 plus the \tilde{\epsilon} value of Algorithm 2. One may also set `bnsBType` as `rel` to get even better performance. Please refer to the file `optsArgParse.lua` for setting of other hyperparameters.   
 
