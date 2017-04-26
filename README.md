@@ -54,23 +54,44 @@ Results of single-model ([Inception-ResNet](https://arxiv.org/abs/1602.07261)) a
 
 The code depends on the [Torch library](http://torch.ch/). Please install torch first.
 
+#### Support of datasets
+
+CIFAR10
+CIFAR100 *coming soon*
+ImageNet *coming soon*
+
+One can specify which dataset to use in the file `optsArgParse.lua`. 
+
+#### Support of network architectures
+
+ResNet (pre-activation)
+Wide ResNets
+Inception-ResNet *coming soon*
+DenseNet *coming soon*
+ResNeXt *coming soon*
+
 #### Training
 
 We take a pre-activation version of ResNet as the example to explain how to train a deep network using SVB and BBN methods. 
 
-SGD with momentum
+Run the following at command line when SVB and BBN are not used (i.e., training is based on standard SGD with momentum)
 
     th main.lua -cudnnSetting deterministic -netType PreActResNet -ensembleID 1 -BN true -nBaseRecur 11 -kWRN 1 -lrDecayMethod exp -lrBase 0.5 -lrEnd 0.001 -batchSize 128 -nEpoch 160 -nLRDecayStage 80 -weightDecay 0.0001 -svBFlag false -bnsBFlag false
 
-SGD with momentum with SVB turned on
+Run the following at command line when SVB is turned on
 
     th main.lua -cudnnSetting deterministic -netType PreActResNet -ensembleID 1 -BN true -nBaseRecur 11 -kWRN 1 -lrDecayMethod exp -lrBase 0.5 -lrEnd 0.001 -batchSize 128 -nEpoch 160 -nLRDecayStage 80 -weightDecay 0.0001 -svBFlag true -svBFactor 1.5 -svBIter 391 -bnsBFlag false
 
-SGD with momentum with both SVB and BBN turned on
+Run the following at command line when both SVB and BBN are turned on
 
     th main.lua -cudnnSetting deterministic -netType PreActResNet -ensembleID 1 -BN true -nBaseRecur 11 -kWRN 1 -lrDecayMethod exp -lrBase 0.5 -lrEnd 0.001 -batchSize 128 -nEpoch 160 -nLRDecayStage 80 -weightDecay 0.0001 -svBFlag true -svBFactor 1.5 -svBIter 391 -bnsBFlag true -bnsBFactor 2 -bnsBType BBN
 
-`svbFactor` is set as 1 plus the \epsilon value of Algorithm 1. `bnsBFactor` is set as 1 plus the \tilde{\epsilon} value of Algorithm 2. One may also set `bnsBType` as `rel` to get even better performance. Please refer to the file `optsArgParse.lua` for setting of other hyperparameters.   
+`svbFactor = 1 + \epsilon (in Algorithm 1)`. `bnsBFactor = 1 + \tilde{\epsilon} (in Algorithm 2)`. One may also set `bnsBType` as `rel` to get even better performance. Setting `kWRN > 1` makes the network architectures become Wide ResNets.   
 
+Please refer to the file `optsArgParse.lua` for setting of other hyperparameters.   
+
+#### Use of SVB and BBN in your own code
+
+Implementation of SVB and BNN methods is in the file `cnnTrain.lua` via functions `cnnTrain:fcConvWeightReguViaSVB()` and `cnnTrain:BNScalingRegu()` respectively. One may refer to `cnnTrain.lua` and `main.lua` for use of these two functions. 
 
 # Acknowledgements
