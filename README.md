@@ -60,7 +60,7 @@ We take a pre-activation version of ResNet as the example to explain how to trai
 
 SGD with momentum
 
-`th main.lua -cudnnSetting deterministic -netType PreActResNet -ensembleID 1 -BN true -nBaseRecur 11 -kWRN 1 -lrDecayMethod exp -lrBase 0.5 -lrEnd 0.001 -batchSize 128 -nEpoch 160 -nLRDecayStage 80 -weightDecay 0.0001 -svBFlag false -bnsBFlag false`
+> th main.lua -cudnnSetting deterministic -netType PreActResNet -ensembleID 1 -BN true -nBaseRecur 11 -kWRN 1 -lrDecayMethod exp -lrBase 0.5 -lrEnd 0.001 -batchSize 128 -nEpoch 160 -nLRDecayStage 80 -weightDecay 0.0001 -svBFlag false -bnsBFlag false
 
 SGD with momentum with SVB turned on
 
