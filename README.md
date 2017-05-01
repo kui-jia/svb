@@ -94,7 +94,7 @@ Run the following at command line when both SVB and BBN are turned on
 
 Setting `svbFactor` as `svbFactor = 1 + \epsilon (in Algorithm 1)`. Setting `bnsBFactor` as `bnsBFactor = 1 + \tilde{\epsilon} (in Algorithm 2)`. Setting `kWRN > 1` makes the network architectures become Wide ResNets. Please refer to the file `optsArgParse.lua` for setting of other hyperparameters.   
 
-*One may also set `bnsBType` as `rel` to get even better performance. *
+*One may also set* `bnsBType` *as* `rel` *to get even better performance*.
 
 #### Use of SVB and BBN in your own code
 
